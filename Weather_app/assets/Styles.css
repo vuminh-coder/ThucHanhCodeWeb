@@ -1,0 +1,88 @@
+.container-fluid > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  background-color: rgb(123, 123, 123);
+}
+
+.Header {
+  grid-area: Header;
+  background-color: rgb(101, 197, 224);
+}
+.Aside {
+  grid-area: Aside;
+  background-color: rgb(133, 218, 133);
+}
+.Main {
+  grid-area: Main;
+  background-color: orange;
+  overflow-y: auto;
+}
+.Article {
+  grid-area: Article;
+  background-color: #9a59b9;
+}
+.Selection {
+  grid-area: Selection;
+  background-color: #4d2f3b;
+}
+.Footer {
+  grid-area: Footer;
+  background-color: #092610;
+}
+
+/* Thiết lập cơ bản cho các item để dễ nhìn */
+.container > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.container-fluid {
+  display: grid;
+  min-height: 100vh;
+  gap: 15px;
+  padding: 10px;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 120px 1fr 120px;
+  grid-template-areas:
+    "Header   Header"
+    "Aside Main "
+    "Footer Footer";
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px;
+  grid-template-areas: "Article Selection";
+}
+@media (max-width: 678px) {
+  .container-fluid {
+    height: auto;
+    grid-template-rows: 80px auto auto 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "Header"
+      "Aside"
+      "Main"
+      "Footer";
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "Article"
+      "Selection";
+  }
+}

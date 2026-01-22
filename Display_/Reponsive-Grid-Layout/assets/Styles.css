@@ -1,0 +1,72 @@
+/* Thiết lập cơ bản cho các item để dễ nhìn */
+.container > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Gán tên vùng (Quan trọng) */
+.header {
+  grid-area: header;
+  background-color: #f1b44c;
+}
+.banner {
+  grid-area: banner;
+  background-color: #d8534e;
+}
+.left-aside {
+  grid-area: left-aside;
+  background-color: #5b9279;
+}
+.main-content {
+  grid-area: main;
+  background-color: #4a90e2;
+}
+.right-aside {
+  grid-area: right-aside;
+  background-color: #f1b44c;
+}
+.low-content {
+  grid-area: low-content;
+  background-color: #5b9279;
+}
+.footer {
+  grid-area: footer;
+  background-color: #4a90e2;
+}
+
+/* Desktop View */
+.container {
+  display: grid;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+  grid-template-rows: 80px auto 1fr auto 50px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+    "header      header      header"
+    "left-aside  banner      right-aside"
+    "left-aside  main        right-aside"
+    "left-aside  low-content right-aside"
+    "footer      footer      footer";
+}
+
+/* Mobile View (max-width: 678px) */
+@media (max-width: 678px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+    grid-template-areas:
+      "header"
+      "banner"
+      "left-aside"
+      "main"
+      "right-aside"
+      "low-content"
+      "footer";
+  }
+}
