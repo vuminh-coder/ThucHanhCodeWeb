@@ -362,11 +362,11 @@
       >
         <header class="main-hf d-flex justify-content-between">
           <div
-            class="container header-container d-flex justify-content-between main-items1 border-radius-10-0 h-100"
+            class="container header-container d-flex justify-content-between border-radius-10-0 h-100"
           >
             <div
               id="weather-toolbar"
-              class="weather-container d-flex gap-10 margin-left-15"
+              class="weather-container d-flex gap-10 margin-left-15 align-items-center"
             >
               weather-city
             </div>
@@ -375,7 +375,7 @@
               <div class="d-flex">
                 <a
                   href="javascript:history.back()"
-                  class="nav-btn"
+                  class="nav-btn text-decoration-none"
                   title="Quay lại"
                 >
                   <svg
@@ -394,7 +394,7 @@
 
                 <a
                   href="javascript:history.forward()"
-                  class="nav-btn"
+                  class="nav-btn text-decoration-none"
                   title="Tiếp theo"
                 >
                   <svg
@@ -413,7 +413,7 @@
 
                 <a
                   href="#"
-                  class="text-color-black unit-dropdown d-flex align-items-center"
+                  class="text-decoration-none text-color-black unit-dropdown d-flex align-items-center"
                 >
                   <span>°C</span>
                   <svg
@@ -454,7 +454,10 @@
                   </button>
                 </aside>
                 <aside class="right-aside1 margin-right-15">
-                  <a href="" class="d-flex align-items-center">
+                  <a
+                    href=""
+                    class="d-flex align-items-center text-decoration-none gap-10"
+                  >
                     <svg
                       width="24"
                       height="24"
@@ -482,10 +485,22 @@
             </div>
           </main>
 
-          <main class="main-hf">
-            <div class="container h-100 border-top-none ft-main-2">
-              <aside class="lefi-aside2"></aside>
-              <aside class="right-aside2"></aside>
+          <main class="main-hf2">
+            <div
+              class="container h-100 border-top-none ft-main-2 d-flex gap-20"
+            >
+              <aside class="left-aside2 h-100">
+                <div class="main-items1 d-flex">
+                  <aside class="left-items1"></aside>
+                  <aside class="right-items1"></aside>
+                </div>
+              </aside>
+              <aside class="right-aside2 h-100">
+                <div class="ft-items"></div>
+                <div class="ft-items"></div>
+                <div class="ft-items"></div>
+                <div class="ft-items"></div>
+              </aside>
             </div>
           </main>
         </footer>
