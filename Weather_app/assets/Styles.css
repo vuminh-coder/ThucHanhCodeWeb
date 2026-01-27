@@ -301,3 +301,23 @@ body {
   border-radius: 10px;
   box-shadow: inset 2px rgba(201, 201, 201, 0.147);
 }
+.main-items > a {
+  border-radius: 25px;
+  padding: 15px;
+  border: 1px solid rgb(41, 41, 40);
+  color: rgb(41, 41, 41);
+  height: 50px;
+  box-sizing: border-box;
+}
+.list-style-type-none {
+  list-style-type: none;
+}
+
+.main-items-li > a {
+  box-sizing: border-box;
+  border: 1px solid rgba(66, 64, 64, 0.355);
+  border-radius: 5px;
+  padding: 7px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
