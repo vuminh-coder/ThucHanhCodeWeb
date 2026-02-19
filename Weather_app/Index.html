@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/Styles1.css" />
+    <link rel="stylesheet" href="./assets/Styles2.css" />
   </head>
   <body>
     <header class="height-header">
@@ -101,7 +103,7 @@
             <div>
               <form action="" class="d-flex">
                 <input type="text" placeholder="Tìm kiếm vị trí" />
-                <submit>🔎 </submit>
+                <input type="submit" value="🔎" placeholder="" />
               </form>
             </div>
           </div>
@@ -109,7 +111,7 @@
       </div>
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid container-content">
       <aside
         class="left-aside justify-content-between flex-direction-column d-flex left-aside-height"
       >
@@ -362,20 +364,20 @@
       >
         <header class="main-hf d-flex justify-content-between">
           <div
-            class="container header-container d-flex justify-content-between border-radius-10-0 h-100"
+            class="container d-flex justify-content-between border-radius-10-0 h-100"
           >
             <div
               id="weather-toolbar"
-              class="weather-container d-flex gap-10 margin-left-15 align-items-center"
+              class="weather-container d-flex gap-10 p-20 align-items-center"
             >
               weather-city
             </div>
 
             <div class="d-flex gap-10 margin-right-15">
-              <div class="d-flex">
+              <div class="d-flex items-dh">
                 <a
                   href="javascript:history.back()"
-                  class="nav-btn text-decoration-none"
+                  class="nav-btn text-decoration-none bg-color-white"
                   title="Quay lại"
                 >
                   <svg
@@ -394,7 +396,7 @@
 
                 <a
                   href="javascript:history.forward()"
-                  class="nav-btn text-decoration-none"
+                  class="nav-btn text-decoration-none bg-color-white"
                   title="Tiếp theo"
                 >
                   <svg
@@ -495,8 +497,10 @@
                   <aside class="right-items1"></aside>
                 </div>
 
-                <div class="d-flex margin-top-10 align-items-center">
-                  <div class="d-flex gap-10 margin-left-15">
+                <div
+                  class="tq-weather d-flex margin-top-10 align-items-center justify-content-between"
+                >
+                  <div class="d-flex gap-10 margin-left-15 gap-10">
                     <div class="d-flex align-items-center">Tổng quan</div>
                     <a
                       href
@@ -504,7 +508,7 @@
                       >Hàng giờ</a
                     >
                   </div>
-                  <div>
+                  <div class="tq-weather2">
                     <nav>
                       <ul class="d-flex gap-10 list-style-type-none">
                         <li class="main-items">
@@ -584,6 +588,331 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+
+                <div class="slider-container">
+                  <button class="nav-btn prev" onclick="moveSlide(-1)">
+                    &#10094;
+                  </button>
+
+                  <div class="slider-viewport">
+                    <div class="slider-wrapper" id="sliderWrapper">
+                      <div class="card">1</div>
+                      <div class="card">2</div>
+                      <div class="card">3</div>
+                      <div class="card">4</div>
+                      <div class="card">5</div>
+                      <div class="card">6</div>
+                      <div class="card">7</div>
+                      <div class="card">8</div>
+                      <div class="card">9</div>
+                      <div class="card">10</div>
+                    </div>
+                  </div>
+
+                  <button class="nav-btn next" onclick="moveSlide(1)">
+                    &#10095;
+                  </button>
+                </div>
+
+                <div class="tq-Graph p-20">
+                  <div class="w-100 justify-content-between d-flex mg-top-20">
+                    <div>Tổng quan</div>
+                    <div>
+                      <div></div>
+                      <div>Cảm giác như</div>
+                    </div>
+                  </div>
+                  <div class="slider-chart w-100 Graph mg-top-10"></div>
+                  <div class="w-100"></div>
+                </div>
+
+                <div class="w-100 p-20 d-grid box-sizing-border">
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    1
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    2
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    3
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    4
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    5
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    6
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    7
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    8
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    9
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    10
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    11
+                  </div>
+                  <div class="col-4 grid-item box-sizing-border mg-top-10">
+                    12
+                  </div>
+                </div>
+
+                <div class="slider-graph box-sizing-border p-20">
+                  <div>Biểu đồ thời tiết</div>
+                  <div class="graph-nd">Biểu đồ nhiệt độ</div>
+                </div>
+
+                <div class="slider-month d-grid p-20">
+                  <div class="january">January</div>
+                  <div class="february">February</div>
+                  <div class="march">March</div>
+                  <div class="april">April</div>
+                  <div class="may">May</div>
+                  <div class="june">June</div>
+                  <div class="july">July</div>
+                  <div class="august">August</div>
+                  <div class="september">September</div>
+                  <div class="october">October</div>
+                  <div class="november">November</div>
+                  <div class="december">December</div>
+                </div>
+
+                <div class="p-20">
+                  <table class="p-20 slider-date" width="100%">
+                    <tr class="" border="1px">
+                      <th>Monday</th>
+
+                      <th>Tuesday</th>
+
+                      <th>Wednesday</th>
+
+                      <th>Thursday</th>
+
+                      <th>Friday</th>
+
+                      <th>Saturday</th>
+
+                      <th>Sunday</th>
+                    </tr>
+
+                    <tr>
+                      <th class="1">1</th>
+
+                      <th class="2">2</th>
+
+                      <th class="3">3</th>
+
+                      <th class="4">4</th>
+
+                      <th class="5">5</th>
+
+                      <th class="6">6</th>
+
+                      <th class="7">7</th>
+                    </tr>
+
+                    <tr>
+                      <th class="8">8</th>
+
+                      <th class="9">9</th>
+
+                      <th class="10">10</th>
+
+                      <th class="11">11</th>
+
+                      <th class="12">12</th>
+
+                      <th class="13">13</th>
+
+                      <th class="14">14</th>
+                    </tr>
+
+                    <tr>
+                      <th class="15">15</th>
+
+                      <th class="16">16</th>
+
+                      <th class="17">17</th>
+
+                      <th class="18">18</th>
+
+                      <th class="19">19</th>
+
+                      <th class="20">20</th>
+
+                      <th class="21">21</th>
+                    </tr>
+
+                    <tr>
+                      <th class="22">22</th>
+
+                      <th class="23">23</th>
+
+                      <th class="24">24</th>
+
+                      <th class="25">25</th>
+
+                      <th class="26">26</th>
+
+                      <th class="27">27</th>
+
+                      <th class="28">28</th>
+                    </tr>
+
+                    <tr>
+                      <th class="29">29</th>
+
+                      <th class="30">30</th>
+
+                      <th class="31">31</th>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="p-20 d-flex flex-direction-column">
+                  Tổng quan về thời tiết hàng tháng
+                  <div></div>
+                </div>
+
+                <div class="d-flex p-20 justify-content-between">
+                  <div>Xu hướng thời tiết hàng tháng</div>
+                  <div class="d-flex gap-20 select">
+                    <select>
+                      <option value="">
+                        <svg
+                          width="100"
+                          height="100"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            stroke="#333"
+                            stroke-width="2"
+                          />
+
+                          <path
+                            d="M3 10H21"
+                            stroke="#333"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+
+                          <path
+                            d="M8 2V6"
+                            stroke="#333"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M16 2V6"
+                            stroke="#333"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+
+                          <circle cx="8" cy="14" r="1" fill="#333" />
+                          <circle cx="12" cy="14" r="1" fill="#333" />
+                          <circle cx="16" cy="14" r="1" fill="#333" />
+                          <circle cx="8" cy="18" r="1" fill="#333" />
+                          <circle cx="12" cy="18" r="1" fill="#333" />
+                        </svg>
+                        12 tháng trước
+                      </option>
+                      <option value="">2025</option>
+                      <option value="">2024</option>
+                      <option value="">2023</option>
+                      <option value="">2022</option>
+                      <option value="">2021</option>
+                      <option value="">2020</option>
+                      <option value="">2019</option>
+                      <option value="">2018</option>
+                      <option value="">2017</option>
+                      <option value="">2016</option>
+                      <option value="">2015</option>
+                      <option value="">2014</option>
+                    </select>
+                    <select>
+                      <option value="">
+                        <svg
+                          width="100"
+                          height="100"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            stroke="#333"
+                            stroke-width="2"
+                          />
+
+                          <path
+                            d="M3 10H21"
+                            stroke="#333"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+
+                          <path
+                            d="M8 2V6"
+                            stroke="#333"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M16 2V6"
+                            stroke="#333"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+
+                          <circle cx="8" cy="14" r="1" fill="#333" />
+                          <circle cx="12" cy="14" r="1" fill="#333" />
+                          <circle cx="16" cy="14" r="1" fill="#333" />
+                          <circle cx="8" cy="18" r="1" fill="#333" />
+                          <circle cx="12" cy="18" r="1" fill="#333" />
+                        </svg>
+                        Tất cả các tháng
+                      </option>
+                      <option value="">Tháng một</option>
+                      <option value="">Tháng hai</option>
+                      <option value="">Tháng ba</option>
+                      <option value="">Tháng tư</option>
+                      <option value="">Tháng năm</option>
+                      <option value="">Tháng sáu</option>
+                      <option value="">Tháng bảy</option>
+                      <option value="">Tháng tám</option>
+                      <option value="">Tháng chín</option>
+                      <option value="">Tháng mười</option>
+                      <option value="">Tháng mười một</option>
+                      <option value="">Tháng mười hai</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="Graph-nt p-20"></div>
+                <div class="d-flex p-20">
+                  <div></div>
+                  <div></div>
                 </div>
               </aside>
               <aside class="right-aside2 h-100">

@@ -1,0 +1,10 @@
+.bg-color-white {
+  background-color: white;
+}
+.items-dh svg {
+  border: 1px solid rgb(0, 0, 0);
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  color: black;
+}
