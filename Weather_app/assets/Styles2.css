@@ -8,3 +8,97 @@
   border-radius: 50px;
   color: black;
 }
+.mt-item svg {
+  height: 15px;
+  width: 15px;
+}
+.main-section {
+  border: none;
+  outline: none;
+}
+.left-items1 svg {
+  height: 20px;
+  width: 20px;
+  color: black;
+}
+/* Nền tím tối như trong ảnh aaf745.png */
+.weather-container1 {
+  background-color: #48446e;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  height: 250px;
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.temp-section {
+  display: flex;
+  align-items: center;
+}
+
+#temperature {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.degree {
+  font-size: 30px;
+  vertical-align: top;
+  margin-top: 15px;
+}
+
+#description {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.summary-text {
+  margin: 25px 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+}
+
+/* Sửa lỗi chồng chữ bằng Grid */
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Chia 5 cột đều nhau */
+  gap: 15px;
+}
+
+.label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+}
+.mg-top-200 {
+  margin-top: 200px;
+}
+.left-items1 {
+  height: 400px;
+}
+.right-items1 {
+  border: none;
+}
+.border-none {
+  border: none;
+}
+.weather-container {
+  contain: content; /* Giúp trình duyệt bỏ qua việc tính toán lại các phần không thay đổi */
+}
+html {
+  scroll-behavior: smooth;
+}

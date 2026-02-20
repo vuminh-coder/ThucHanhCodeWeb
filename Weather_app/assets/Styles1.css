@@ -78,8 +78,8 @@
   border-top: none;
 }
 
-.lefi-aside2 {
-  grid-area: lefi-aside2;
+.left-aside2 {
+  grid-area: left-aside2;
   padding: 10px;
 }
 .right-aside2 {
@@ -109,14 +109,14 @@
   margin-top: 20px;
 }
 
-.left-items1 {
-  grid-area: left-items1;
+.right-items1 {
+  grid-area: right-items1;
   padding: 10px;
   height: 100%;
   box-sizing: border-box;
 }
-.right-items1 {
-  grid-area: right-items1;
+.left-items1 {
+  grid-area: left-items1;
   padding: 10px;
   height: 100%;
   box-sizing: border-box;
@@ -127,7 +127,7 @@
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "right-items1 left-items1";
+  grid-template-areas: " left-items1 right-items1";
   height: 30vh;
   gap: 10px;
   margin-top: 20px;
@@ -144,7 +144,6 @@
   border: 1px solid rgb(41, 41, 40);
   color: rgb(41, 41, 41);
   height: 50px;
-  box-sizing: border-box;
 }
 .list-style-type-none {
   list-style-type: none;
@@ -154,9 +153,16 @@
   box-sizing: border-box;
   border: 1px solid rgba(66, 64, 64, 0.355);
   border-radius: 5px;
-  padding: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-top: 13px;
   padding-bottom: 13px;
+}
+.font-size-16 {
+  font-size: 16px !important;
+}
+.font-weight-500 {
+  font-weight: bold !important;
 }
 .height-header form input {
   height: 35px;
@@ -188,12 +194,10 @@
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 .left-aside1 button {
-  background-color: aqua;
   border-radius: 5px;
   align-items: center;
   color: rgb(0, 0, 0);
   font-size: 12px;
-  box-shadow: 0 2px 4px rgb(177, 176, 176);
 }
 
 .right-aside1 a {
@@ -201,9 +205,17 @@
   font-size: 18px;
 }
 
-.main-items,
+.main-items {
+  transition: all 0.2s ease;
+  font-size: 12px;
+}
+.font-size-20 {
+  font-size: 20px !important;
+}
+
 .main-items-li {
   transition: all 0.2s ease;
+  font-size: 16px;
 }
 .main-items > a:hover,
 .main-items-li > a:hover {
@@ -376,4 +388,170 @@ body > header {
 .select select {
   height: 35px;
   border-radius: 5px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.slider-viewport {
+  width: 100%;
+  overflow: hidden; /* Quan trọng: để ẩn các card ngoài vùng nhìn thấy */
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.4s ease-in-out; /* Hiệu ứng trượt mượt */
+  gap: 10px;
+}
+
+.card {
+  min-width: calc(
+    100% / 6 - 10px
+  ); /* Hiển thị đúng 6 card mỗi lần như biến visibleItems của bạn */
+  background: #3b3a62;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+.color-white {
+  color: white;
+}
+.weather-icon-svg {
+  fill: yellow; /* Chỉnh màu vàng cho icon SVG */
+  width: 50px;
+}
+.tq-Graph {
+  background-color: #1e2535; /* Màu nền tối trong ảnh */
+  border-radius: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+.mg-top-20 {
+  margin-top: 20px;
+}
+.text-grey {
+  color: #a0a0a0;
+  font-size: 14px;
+}
+
+/* CSS cho nút gạt Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider.round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.slider.round:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #555;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Chú thích */
+.dot.yellow {
+  height: 10px;
+  width: 10px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Thanh độ ẩm */
+.precipitation-bar span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.weather-card {
+  background: #2b3344;
+  border-radius: 12px;
+  padding: 15px;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hiệu ứng thanh tầm nhìn (Bậc thang) */
+.pyramid-bars {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3px;
+  margin-bottom: 10px;
+}
+.pyramid-bars .bar {
+  height: 4px;
+  background: #4dbd74;
+  border-radius: 2px;
+}
+.bar-1 {
+  width: 100%;
+}
+.bar-2 {
+  width: 80%;
+}
+.bar-3 {
+  width: 60%;
+}
+
+/* Vòng cung Gauge (AQI/UV) */
+.gauge-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 5px;
+}
+.gauge-arc {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #444;
+  border-top-color: #f1c40f; /* Màu UV */
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+/* Pha mặt trăng */
+.moon-phase-disk {
+  width: 50px;
+  height: 50px;
+  background: #f1c40f;
+  border-radius: 50%;
+  box-shadow: inset 15px 0 0 #2b3344; /* Tạo hình lưỡi liềm */
 }
